@@ -1,0 +1,64 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ *
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+// style the background color of the tree view
+.tree-view {
+    // background-color: whitesmoke;
+}
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+    // color: white;
+    background-color: #101112;
+}
+atom-text-editor::shadow .wrap-guide {
+    visibility: hidden;
+}
+// To style other content in the text editor's shadow DOM, use the ::shadow expression
+atom-text-editor::shadow .cursor {
+    //border-color: red;
+}
+
+// Custom LESS
+atom-text-editor::shadow .gutter {
+    background-color: #0e1316;
+}
+atom-text-editor::shadow .selection .region {
+    background-color: #6e7376;
+}
+.header.list-item.seti-compact {
+    border-bottom: #3A3E40 solid 1px;
+}
+atom-panel-container.left, atom-panel-container.right {
+  font-size: 85%;
+}
+// atom-pane .tab-bar {
+//   height: 30px;
+//   line-height: 30px;
+//   .placeholder {
+//     height: 30px;
+//     &::after {
+//       margin-top: -20px;
+//     }
+//   }
+//   .tab {
+//     height: 30px;
+//     .close-icon {
+//       top: 0px;
+//       margin-top: 0px;
+//     }
+//   }
+// }
+// .settings-view .config-menu .nav > li.active > a {
+//   color: inherit;
+// }
