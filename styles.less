@@ -21,19 +21,19 @@ atom-text-editor {
     // color: white;
     background-color: #101112;
 }
-atom-text-editor::shadow .wrap-guide {
+atom-text-editor.editor .wrap-guide {
     visibility: hidden;
 }
 // To style other content in the text editor's shadow DOM, use the ::shadow expression
-atom-text-editor::shadow .cursor {
+atom-text-editor.editor .cursor {
     //border-color: red;
 }
 
 // Custom LESS
-atom-text-editor::shadow .gutter {
+atom-text-editor.editor .gutter {
     background-color: #0e1316;
 }
-atom-text-editor::shadow .selection .region {
+atom-text-editor.editor .selection .region {
     background-color: #6e7376;
 }
 .header.list-item.seti-compact {
@@ -41,24 +41,52 @@ atom-text-editor::shadow .selection .region {
 }
 atom-panel-container.left, atom-panel-container.right {
   font-size: 85%;
+  .list-item {
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+      //background-color: #25292b;
+    }
+  }
 }
-// atom-pane .tab-bar {
-//   height: 30px;
-//   line-height: 30px;
-//   .placeholder {
-//     height: 30px;
-//     &::after {
-//       margin-top: -20px;
-//     }
-//   }
-//   .tab {
-//     height: 30px;
-//     .close-icon {
-//       top: 0px;
-//       margin-top: 0px;
-//     }
-//   }
-// }
-// .settings-view .config-menu .nav > li.active > a {
-//   color: inherit;
-// }
+atom-pane {
+  &.pane {
+    opacity: 0.6;
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+.terminal-plus .xterm {
+  background-color: #101112;
+}
+
+status-bar {
+    font-size: 12px;
+    a.inline-block {
+        color: #d4d7d6 !important;
+    }
+}
+
+// Atom-clock plugin
+#atom-clock {
+    .icon-clock {
+        color: #519aba;
+        &::before {
+        color: #519aba;
+        }
+    }
+}
+
+// Spotify plugin
+.spotify-container {
+  color: #1ED760;
+  padding-left: 10px;
+  .track-info {
+    //font-size: 12px;
+    font-family: -apple-system, helvetica neue;
+    //letter-spacing: 0.5px;
+    padding-left: 5px;
+  }
+}
